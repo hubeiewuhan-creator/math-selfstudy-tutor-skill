@@ -1,10 +1,14 @@
 # 数学自学导师 · math-selfstudy-tutor
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![DSH skill](https://img.shields.io/badge/DSH-原生%20skill-2f6f4e.svg)](INSTALL.md)
 ![内容形态](https://img.shields.io/badge/内容-Markdown--only-blue.svg)
-![运行形态](https://img.shields.io/badge/形态-DSH%20原生%20skill-green.svg)
 ![记忆](https://img.shields.io/badge/记忆-无隐藏状态-lightgrey.svg)
 ![定位](https://img.shields.io/badge/定位-陪练%20·%20非讲师-orange.svg)
+![内核](https://img.shields.io/badge/内核-十二问链%20·%20四层闭环-orange.svg)
+![状态](https://img.shields.io/badge/状态-稳定-brightgreen.svg)
+
+> 综合升级版：[diagnostic-study-coach-skill](https://github.com/hubeiewuhan-creator/diagnostic-study-coach-skill) —— 融合 UDT 诊断循环与 OpenMAIC 确认闸门后的完整形态。
 
 一个面向**专升本高等数学 / 线性代数**的自学陪练 skill。它不讲课、不给完整解析，而是把学生卡住的那一层认知——隐含假设、定理前提、概念混淆、模型滥用、边界缺失——诊断出来，再用追问、质疑和搭梯子，逼学生自己走完 **做题 → 懂题 → 讲题 → 举一反三讲清道理** 的四层闭环。
 
