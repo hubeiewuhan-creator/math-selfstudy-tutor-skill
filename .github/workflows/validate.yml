@@ -1,0 +1,48 @@
+﻿name: Validate skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  markdown-links:
+    name: 检查 markdown 相对链接
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 运行链接检查
+        run: bash scripts/check-links.sh
+
+  skill-structure:
+    name: 检查 skill 结构完整
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 必备文件存在
+        run: |
+          set -e
+          test -f skills/math-selfstudy-tutor/SKILL.md
+          test -f skills/math-selfstudy-tutor/references/constitution.md
+          test -f skills/math-selfstudy-tutor/references/ladder.md
+          test -f skills/math-selfstudy-tutor/references/grading.md
+          test -f skills/math-selfstudy-tutor/references/exploration.md
+          test -f skills/math-selfstudy-tutor/references/hints.md
+          test -f evals/cases.json
+          test -f README.md
+          echo "skill 结构完整"
+
+  frontmatter:
+    name: 检查 SKILL.md frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: name 与 description 存在
+        run: |
+          set -e
+          head -n 12 skills/math-selfstudy-tutor/SKILL.md | grep -q '^name:'
+          head -n 12 skills/math-selfstudy-tutor/SKILL.md | grep -q '^description:'
+          echo "frontmatter 合规"
+
